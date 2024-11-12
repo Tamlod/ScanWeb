@@ -18,12 +18,18 @@ ScanWeb — это инструмент для сканирования веб-�
    ```bash
    git clone https://github.com/Tamlod/ScanWeb.git
    cd ScanWeb
-## Установка Python и зависимостей
+### 2. Установка Python и зависимостей
+
+#### Установка Python 3 и pip
 
 Убедитесь, что у вас установлен Python 3 и менеджер пакетов `pip`.
 
-### Для Ubuntu/Debian (APT):
+- **Ubuntu/Debian (APT)**:
+  ```bash
+  sudo apt update
+  sudo apt install python3 python3-pip -y
+- **Arch Linux (Pacman)**:
+  ```bash
+  sudo pacman -Sy python python-pip
 
-```bash
-sudo apt update
-sudo apt install python3 python3-pip -y
+
