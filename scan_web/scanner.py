@@ -1,3 +1,4 @@
+from time import time
 import aiohttp
 import ssl
 import socket
