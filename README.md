@@ -16,3 +16,6 @@
 git clone https://github.com/Tamlod/ScanWeb.git
 cd ScanWeb
 
+### 2. Установка Python и зависимостей
+Установка Python 3 и pip
+Убедитесь, что у вас установлен Python 3 и менеджер пакетов pip.
