@@ -14,26 +14,30 @@ async def create_html_report(results):
         <head>
             <title>Отчет сканирования уязвимостей</title>
             <style>
-                body { font-family: Arial, sans-serif; background-color: #f4f4f9; }
-                h1 { color: #333; }
-                table { width: 100%; border-collapse: collapse; }
-                table, th, td { border: 1px solid #ddd; padding: 8px; }
-                th { background-color: #333; color: white; }
+                body { font-family: Arial, sans-serif; background-color: #f4f4f9; color: #333; }
+                h1 { color: #333; text-align: center; }
+                table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+                th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+                th { background-color: #4CAF50; color: white; }
                 tr:nth-child(even) { background-color: #f2f2f2; }
+                tr:hover { background-color: #ddd; }
             </style>
         </head>
         <body>
             <h1>Отчет сканирования уязвимостей</h1>
             <table>
-                <tr>
-                    <th>Проверка</th>
-                    <th>Результат</th>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Проверка</th>
+                        <th>Результат</th>
+                    </tr>
+                </thead>
+                <tbody>
     """
     for test, result in results.items():
         report_template += f"<tr><td>{test}</td><td>{result}</td></tr>"
-
     report_template += """
+                </tbody>
             </table>
         </body>
     </html>
